@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    font-family: Roboto, serif;
+}
+
+form {
+    margin: auto;
+    display: flex;
+    width: 400px;
+}
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+    margin: auto;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    cursor: text;
+    transition: 0.3s ease all; 
+    font-size: 16px; 
+}
+
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+    transition: 0.3s ease all;
+}
+
+input:focus {
+    border-bottom-color: #30e607; 
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    color: #39da0c;
+    font-size: 12px; 
+    transform: translateY(-20px); 
+}
+
+input::placeholder {
+    color: transparent;
+}
