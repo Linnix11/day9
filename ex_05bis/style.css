@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#character {
+    width: 256px;
+    height: 256px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-image: url('walking.png');
+    background-repeat: no-repeat;
+    transition: transform 0.1s linear;
+}
+
+#character.left {
+    transform: scaleX(-1);
+}
+
+#character.walking {
+    animation: walk 0.6s steps(6) infinite;
+}
+
+#character.resting {
+    background-position: 0 0;
+}
+
+@keyframes walk {
+    from { background-position: 0 0; }
+    to { background-position: -1536px 0; }
+}
